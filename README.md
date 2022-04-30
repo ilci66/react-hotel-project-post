@@ -22,4 +22,6 @@
 
 * "npm install react-router-dom" install the react router. 
 * We will be creating 4 files in our pages folder. home.jsx, rooms.jsx, facilities.jsx, contact.jsx
- 
+***insert image "pages created"***
+* Now if everything had gone right your file structure should look like this image above here
+* Render the names of the files inside the pages so you know which one you are on and if your router is going to work or not
