@@ -1,8 +1,11 @@
 import React from 'react'
+import { Outlet } from 'react-router-dom'
 
 const rooms = () => {
-  return (
+  return (<>
     <div>rooms</div>
+    <Outlet />
+  </>
   )
 }
 

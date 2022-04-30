@@ -22,7 +22,18 @@
 
 * "npm install react-router-dom" install the react router. 
 * We will be creating 4 files in our pages folder. home.jsx, rooms.jsx, facilities.jsx, contact.jsx
-***insert image "pages created"***
+***insert image "pages created (name's different now but you will get it)"***
 * Now if everything had gone right your file structure should look like this image above here
 * Render the names of the files inside the pages so you know which one you are on and if your router is going to work or not
 * Now create the router in app.js and check if it works (share the code after you are done)
+* now create the navbar using tailwind, also use compoennets as much as possible
+
+
+
+# Next
+
+* Create the footer and afther doing that create your layout component
+* Change the router file explain the changes while also explaining the necessity of using outlef-t and consistent layout and nesting
+
+## when layout is done (with navigation and footer)
+* Start with the homepage
