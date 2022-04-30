@@ -25,3 +25,4 @@
 ***insert image "pages created"***
 * Now if everything had gone right your file structure should look like this image above here
 * Render the names of the files inside the pages so you know which one you are on and if your router is going to work or not
+* Now create the router in app.js and check if it works (share the code after you are done)
