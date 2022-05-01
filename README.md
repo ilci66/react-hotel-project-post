@@ -36,6 +36,10 @@
 
 * create the carouself with tailwind inside components folder, pass the image sources and alt texts in an arrray as prop
 
+* After the carousel for rooms 
+
+* Create the component for the facilities grid for the homepage
 
 # Next
-* Fix the carosel looks weird
+
+* Something in the home page causes horizontal scroll find and fix it, don't spend 30 more than 30 mins over it. if it's going to take more than that just hide it

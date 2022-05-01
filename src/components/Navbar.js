@@ -4,7 +4,7 @@ import NavLink from './NavLink'
 
 const Navbar = () => {
   return (
-    <nav className='text-white px-2 py-6 bg-cyan-500 flex flex-row justify-between'>
+    <nav className='text-white px-8 py-6 bg-cyan-500 flex flex-row justify-between'>
       <Link className='font-bold text-2xl' to="/">HOME</Link>
       <div>
         <NavLink to="rooms"/>
