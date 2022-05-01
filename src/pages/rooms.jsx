@@ -3,8 +3,8 @@ import { Outlet } from 'react-router-dom'
 
 const rooms = () => {
   return (<>
-    <div>rooms</div>
-    <Outlet />
+    <div>available rooms</div>
+    
   </>
   )
 }

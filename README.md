@@ -10,7 +10,7 @@
 
 *   As we wont be needing built-in App.js files we can delete the app.css file as well. We will use the App.js file to handle the routing
 
-*   give body a flex and flex column also set the basics such as margin:0 padding:0 ext. box-sizing: border-box
+*   give body and root a flex and flex column also set the basics such as margin:0 padding:0 ext. box-sizing: border-box
 
 *   Rest of our css will be handled with tailwind and will be inline, if you don't like handling styling this way you can go ahead and include your own method. 
 
@@ -27,13 +27,15 @@
 * Render the names of the files inside the pages so you know which one you are on and if your router is going to work or not
 * Now create the router in app.js and check if it works (share the code after you are done)
 * now create the navbar using tailwind, also use compoennets as much as possible
+* Create the footer and afther doing that create your layout component, don't forget to margin-top: auto to keep it down below
+* Change the router file explain the changes while also explaining the necessity of using outlef-t and consistent layout and nesting
+* Create the images folder in src folder for all the images we will use ,n the project, I got all mine from unsplash
 
+## Now in the home page
+* Add the beach image with the alt text
+
+* create the carouself with tailwind inside components folder, pass the image sources and alt texts in an arrray as prop
 
 
 # Next
-
-* Create the footer and afther doing that create your layout component
-* Change the router file explain the changes while also explaining the necessity of using outlef-t and consistent layout and nesting
-
-## when layout is done (with navigation and footer)
-* Start with the homepage
+* Fix the carosel looks weird
