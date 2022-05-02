@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Room = () => {
+const Room = ({room}) => {
   return (
-    <div>dynamic Room</div>
+    <div>{room.name}</div>
   )
 }
 

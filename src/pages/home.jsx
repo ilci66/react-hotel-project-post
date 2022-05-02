@@ -11,7 +11,7 @@ import room6 from '../images/room6.jpg'
 import { Link } from 'react-router-dom'
 
 
-const home = () => {
+const Home = () => {
 
   const images = [
     {src:room1, alt: "a nice room", text:"room 1"},
@@ -31,4 +31,4 @@ const home = () => {
   </>)
 }
 
-export default home
+export default Home

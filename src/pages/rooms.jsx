@@ -1,12 +1,22 @@
 import React from 'react'
-import { Outlet } from 'react-router-dom'
 
-const rooms = () => {
+const Rooms = () => {
+  const rooms = [
+    {
+      id:1, 
+      src:"", 
+      info:"",
+      name:"",
+      
+    }
+  ]
+  
   return (<>
-    <div>available rooms</div>
+    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
+
+    </div>
     
-  </>
-  )
+  </>)
 }
 
-export default rooms
+export default Rooms

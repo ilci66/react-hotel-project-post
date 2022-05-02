@@ -47,8 +47,8 @@
 ## Contact
 * Take care of contact now with an image of an hotel and maybe a form, good state practice. 
 * Explan the state changes with onchange and submit functionality. a we don't have a database or a mean to handle mails yet, we will only console log it. 
+* We are just using the info sent in the alert text, if you have a database or some kind of backend functionality implement something. 
 
 
 # Next
-
-* handle the form submission and states and stuff in contact
+* Now handle the rooms
