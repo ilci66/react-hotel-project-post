@@ -40,6 +40,9 @@
 
 * Create the component for the facilities grid for the homepage
 
-# Next
+## Facilities 
+* Now Let's take care of our facilties page, what does our hotel have to offer. Import the images and create the divs for the facilities. Animate them if you want to or give that option to the user
+* when creating the facilities, you can replace all the things you use multiple times with components. I'm not going to do it but if you wanna do it go ahead, it's always good to practice.
 
-* Now Let's take care of our facilties page, what does our hotel have to offer
+
+# Next
