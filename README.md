@@ -42,4 +42,4 @@
 
 # Next
 
-* Something in the home page causes horizontal scroll find and fix it, don't spend 30 more than 30 mins over it. if it's going to take more than that just hide it
+* Now Let's take care of our facilties page, what does our hotel have to offer

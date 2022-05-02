@@ -8,7 +8,7 @@ import room3 from '../images/room3.jpg'
 import room4 from '../images/room4.jpg'
 import room5 from '../images/room5.jpg'
 import room6 from '../images/room6.jpg'
-
+import { Link } from 'react-router-dom'
 
 
 const home = () => {
@@ -23,12 +23,9 @@ const home = () => {
   ]
 
   return (<>
-  <h1 className='text-center text-6xl mt-4 font-bold text-cyan-500 underline'>
-    Welcome to Our Super Awesome Hotel
-  </h1> 
+  <h1 className='text-center text-6xl font-bold text-cyan-500 underline'>Welcome to Our Super Awesome Hotel</h1> 
   <img className='mt-10 object-cover h-96' src={beach} alt="A beautiful beach" />
-  <h2 className='text-center text-4xl my-8 underline font-bold text-cyan-500'>
-    Available Rooms</h2>
+  <Link to="/rooms"><h2 className='text-center text-4xl my-8 underline font-bold text-cyan-500'>Available Rooms</h2></Link>
   <Carousel images={images} />
   <HomeFacilities />
   </>)

@@ -1,9 +1,9 @@
 import React from 'react'
 
 const facilities = () => {
-  return (
-    <div>facilities</div>
-  )
+  return (<>
+    
+  </>)
 }
 
 export default facilities
