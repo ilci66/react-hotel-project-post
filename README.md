@@ -50,10 +50,14 @@
 * We are just using the info sent in the alert text, if you have a database or some kind of backend functionality implement something. 
 
 ## Rooms 
+* create the rooms file in src/db/index.js, to mimick the remote data source
 * as we don't have a database that we can pull the room information from, we will just use the six rooms we defined.
 * we will render the filtered room.
 * use the uselayouteffect to get the state.
 * the filtering will happen in the filtering function in the form we created. 
+* If there is a filtered array render and map that one. If there's no filter go and render that one.
+* Handle the clear filter option as well 
 
 # Next
-* Now handle the rooms
+# Room
+get the room info from the database using the prarams passed

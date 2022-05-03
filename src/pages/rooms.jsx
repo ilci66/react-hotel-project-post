@@ -1,61 +1,69 @@
-import React, { useEffect, useState, useLayoutEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import rooms from '../db';
 
-import room1pic from '../images/room1.jpg'
-import room2pic from '../images/room2.jpg'
-import room3pic from '../images/room3.jpg'
-import room4pic from '../images/room4.jpg'
-import room5pic from '../images/room5.jpg'
-import room6pic from '../images/room6.jpg'
-
-const rooms = [
-  { id:1, src: room1pic, info:"A cozy room for 2", name:"Room 1", people: 2, dailyPrice:100 },
-  { id:2, src: room2pic, info:"A cozy room for 2", name:"Room 2", people: 1, dailyPrice:150 },
-  { id:3, src: room3pic, info:"A cozy room for 2", name:"Room 3", people: 2, dailyPrice:200 },
-  { id:4, src: room4pic, info:"A cozy room for 2", name:"Room 4", people: 4, dailyPrice:100 },
-  { id:5, src: room5pic, info:"A cozy room for 2", name:"Room 5", people: 2, dailyPrice:50 },
-  { id:6, src: room6pic, info:"A cozy room for 2", name:"Room 6", people: 1, dailyPrice:250 },
-];
 
 const Rooms = () => {
 
-  const [filteredRooms, setFilteredRooms] = useState();
-  useLayoutEffect(() => {
-    setFilteredRooms(rooms);
-    // console.log(filteredRooms)
+  const [nog, setNog] = useState();
+  const [budget, setBudget] = useState();
+  const [days, setDays] = useState();
+  const [allRooms, setAllRooms] = useState();
+  const [filtered, setFiltered] = useState(undefined)
+  
+  useEffect(() => {
+    setAllRooms(rooms);
   })
+
+  const filterRooms = (e) => {
+    e.preventDefault();
+    
+    const result = allRooms.filter(room => room.dailyPrice <= budget && room.people >= nog && room.availableFor >= days )
+
+    console.log("result", result)
+    
+    setFiltered([...result]);
+  }
+  const clearFilter = () => {
+    setAllRooms(rooms);
+    setFiltered(undefined)
+  }
 
   
   return (<>
     <div className='flex flex-col items-center'>
-      <form className='min-w-[300px] bg-purple-50 p-4 mt-6' >
+      <form onSubmit={filterRooms} className='min-w-[300px] bg-purple-50 p-4 mt-6' >
         <div className='flex flex-col'>
-          <label htmlFor="nop">Number of People</label>
+          <label htmlFor="nog">Number of Guests (Max)</label>
           <input 
             className='bg-cyan-100 p-2'
             type="number" 
-            name='nop' 
+            onChange={(e) => setNog(e.target.value)}
+            name='nog' 
             placeholder="1"
             max={4}
             min={1} 
           />
         </div>
         <div className='flex flex-col'>
-          <label htmlFor="price">Maximum daily price</label>
+          <label htmlFor="price">Budget (Daily Max)</label>
           <input 
             className='bg-cyan-100 p-2'
             type="number" 
             name='price' 
+            onChange={(e) => setBudget(e.target.value)}
             placeholder="100" 
             min={100}
             max={250}
           />
         </div>
         <div className='flex flex-col'>
-          <label htmlFor="days">For how many days</label>
+          <label htmlFor="days">Days</label>
           <input 
             className='bg-cyan-100 p-2'
             type="number" 
             name='days' 
+            onChange={(e) => setDays(e.target.value)}
             placeholder="2" 
             min={1}
             max={30}
@@ -67,12 +75,25 @@ const Rooms = () => {
           className='bg-cyan-700 text-white p-2 mt-2 rounded w-full cursor-pointer hover:bg-cyan-600'
         />
       </form>
-      <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-5/6 mt-4'>
-        {filteredRooms ? filteredRooms.map(r => <div key={r.id}>
-          <img src={r.src} alt="" />
-          {r.id}
-          
-        </div>): ""}
+        <button onClick={clearFilter} className='bg-purple-700 text-white p-2 mt-2 rounded w-full cursor-pointer hover:bg-purple-600 max-w-[300px]'>CLEAR FILTER</button>
+      <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-5/6 my-4'>
+        {allRooms && !filtered ? allRooms.map(r => <Link key={r.id} to={`${r.id}`}>
+          <div >
+            <img src={r.src} alt="" />
+            <p className='text-2xl'>{r.name}</p>
+            <p>Daily Price: {r.dailyPrice} Money Units</p>
+            <p>Capacity: {r.people} People</p>
+            <p>Available For: {r.availableFor} Days</p>
+          </div>
+        </Link>): filtered ? filtered.map(r => <Link key={r.id} to={`${r.id}`}>
+          <div >
+            <img src={r.src} alt="" />
+            <p className='text-2xl'>{r.name}</p>
+            <p>Daily Price: {r.dailyPrice} Money Units</p>
+            <p>Capacity: {r.people} People</p>
+            <p>Available For: {r.availableFor} Days</p>
+          </div>
+        </Link>): ""}
       </div>
     </div>
     
