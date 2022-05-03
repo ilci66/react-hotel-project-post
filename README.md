@@ -49,6 +49,11 @@
 * Explan the state changes with onchange and submit functionality. a we don't have a database or a mean to handle mails yet, we will only console log it. 
 * We are just using the info sent in the alert text, if you have a database or some kind of backend functionality implement something. 
 
+## Rooms 
+* as we don't have a database that we can pull the room information from, we will just use the six rooms we defined.
+* we will render the filtered room.
+* use the uselayouteffect to get the state.
+* the filtering will happen in the filtering function in the form we created. 
 
 # Next
 * Now handle the rooms
