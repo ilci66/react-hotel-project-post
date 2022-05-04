@@ -5,18 +5,19 @@ import { Carousel as C } from 'react-responsive-carousel';
 import { Link } from 'react-router-dom';
 
 const Carousel = ({images}) => {
-  return (
-    <Link to="/rooms">
+  return (<>
     <C className='m-auto md:w-3/5 sm:w-4/5'>
       {images.map(i => {
         return <div>
         <img src={i.src} />
-        <p className="legend">{i.text}</p>
+        <p className="legend">{i.name}</p>
     </div>
       })}
     </C>
+    <Link className='m-auto text-2xl text-cyan-500' to="/rooms">
+      Choose your room and make your reservation  
     </Link>
-  )
+  </>)
 }
 
 export default Carousel

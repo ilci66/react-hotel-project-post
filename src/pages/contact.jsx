@@ -52,7 +52,7 @@ const Contact = () => {
         rows="10"
       ></textarea>
     </div>
-    <input className='p-4 rounded mt-4 font-bold text-white text-2xl cursor-pointer hover:opacity-90 w-full m-auto bg-red-400' type="submit" value="SUBMIT" />
+    <input className='p-4 rounded mt-4 font-bold text-white text-2xl cursor-pointer hover:bg-cyan-700 w-full m-auto bg-cyan-800' type="submit" value="SUBMIT" />
   </form>
   </>)
 }
