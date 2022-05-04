@@ -58,6 +58,11 @@
 * If there is a filtered array render and map that one. If there's no filter go and render that one.
 * Handle the clear filter option as well 
 
-# Next
 # Room
-get the room info from the database using the prarams passed
+* get the room info from the database using the prarams passed
+* calculate the cost of the stay using the days and the price given from the rooms
+* make reservation when the price is calculated
+* as we don't have a payment and an acctual working reservation system we will just window.confirm the info 
+
+# Next
+KEEP A CONSISTENT COLOR CHEME IN COMPONENTS
