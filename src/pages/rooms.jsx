@@ -5,26 +5,37 @@ import rooms from '../db';
 
 const Rooms = () => {
 
+  // nog is short for number of guests
   const [nog, setNog] = useState();
   const [budget, setBudget] = useState();
   const [days, setDays] = useState();
+
+  // When the component is mounted we will render all the rooms
+  // and when filtered is undefined as well
   const [allRooms, setAllRooms] = useState();
+
+  // filtered will include the paramaters we want to filter the 
+  // existing rooms by
   const [filtered, setFiltered] = useState(undefined)
   
   useEffect(() => {
+    // When components mounts
+    // This is the equivalent of componenetDidMount in classes
     setAllRooms(rooms);
   })
 
   const filterRooms = (e) => {
+    // again prevent the refresh
     e.preventDefault();
     
+    // filtering the rooms
     const result = allRooms.filter(room => room.dailyPrice <= budget && room.people >= nog && room.availableFor >= days )
 
-    console.log("result", result)
-    
+    // Set the filtered, these are the ones we want to see
     setFiltered([...result]);
   }
   const clearFilter = () => {
+    // Showing all the rooms
     setAllRooms(rooms);
     setFiltered(undefined)
   }
@@ -77,6 +88,7 @@ const Rooms = () => {
       </form>
         <button onClick={clearFilter} className='bg-purple-700 text-white p-2 mt-2 rounded w-full cursor-pointer hover:bg-purple-600 max-w-[300px]'>CLEAR FILTER</button>
       <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-5/6 my-4'>
+        {/* if there are no filtered, render all the rooms */}
         {allRooms && !filtered ? allRooms.map(r => <Link key={r.id} to={`${r.id}`}>
           <div >
             <img src={r.src} alt="" />
@@ -85,6 +97,7 @@ const Rooms = () => {
             <p>Capacity: {r.people} People</p>
             <p>Available For: {r.availableFor} Days</p>
           </div>
+          {/* if there are filtered render filtered */}
         </Link>): filtered ? filtered.map(r => <Link key={r.id} to={`${r.id}`}>
           <div >
             <img src={r.src} alt="" />

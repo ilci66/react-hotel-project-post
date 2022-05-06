@@ -18,7 +18,7 @@ const Room = () => {
 
   const calculate = (e) => {
     e.preventDefault();
-    console.log("calculate called")
+    
     // just an extra measure
     if(days>roomInfo[0].availableFor || days<=0){
       alert("invalid input for days")

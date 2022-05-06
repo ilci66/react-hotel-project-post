@@ -1,3 +1,4 @@
+// Feel free to change information here as well
 import room1pic from '../images/room1.jpg'
 import room2pic from '../images/room2.jpg'
 import room3pic from '../images/room3.jpg'
